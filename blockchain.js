@@ -1,5 +1,5 @@
 import { createHash } from 'crypto';
-import PoWConsensus from './consensus/pow.js';
+import PoW from './pow.js';
 
 class Blockchain {
     constructor() {
@@ -51,7 +51,7 @@ class Blockchain {
     }
 
     pow() {
-        const consensus = new PoWConsensus().find();
+        const consensus = new PoW().find();
         this.newBlock(consensus.proof);
     }
 }

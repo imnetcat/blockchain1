@@ -9,4 +9,3 @@ blockchain.pow();
 console.timeEnd("pow");
 
 console.log('\n', blockchain.chain);
-

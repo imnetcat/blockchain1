@@ -5,7 +5,7 @@ class Blockchain {
     constructor() {
         this.chain = [];
         this.transactions = [];
-        // Generate genesis block - the first block of the chain
+        // Generate genesis block
         this.newBlock('05102001', 'Guskov');
     }
 
@@ -51,8 +51,8 @@ class Blockchain {
     }
 
     pow() {
-        const consensus = new PoW().find();
-        this.newBlock(consensus.proof);
+        const proof = new PoW().find();
+        this.newBlock(proof);
     }
 }
 

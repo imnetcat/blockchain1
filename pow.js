@@ -19,9 +19,6 @@ class PoW {
     }
     validate(previousProof, proof) {
         if (!previousProof || !proof) return false;
-        console.log('test1', PoWStep(`${previousProof}${proof}`))
-        console.log('previousProof', previousProof)
-        console.log('proof', proof)
         return PoWValidityRule(proof);
     }
 }
